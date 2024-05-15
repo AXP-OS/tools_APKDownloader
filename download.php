@@ -1,23 +1,20 @@
 <?php
-//Example for generating WhatsApp APK download link.
 require_once 'src/APKDownloader.php';
 try{
   $apk = new APKDownloader();
   if(isset($argv[1])){
-      $dl = $apk->fetch($argv[1]); //WhatsApp's package name is "com.whatsapp"
+      $dl = $apk->fetch($argv[1]);
       if(isset($dl->url)){
         $url = 'https:'.$dl->url;
         echo "\nFound download URL: ".$url."\n";
 
-        // Use basename() function to return the base name of file
+        // get file name
         $file_name = basename($url);
 
-        // Use file_get_contents() function to get the file
-        // from url and use file_put_contents() function to
-        // save the file by using base name
+        // download
         if (file_put_contents($file_name, file_get_contents($url)))
         {
-            echo "File downloaded successfully and saved to $file_name\n";
+            echo "File downloaded successfully and saved to: $file_name\n";
         }
         else
         {

@@ -1,8 +1,8 @@
 # apk downloader
 
-downloads given package directly from google play store or Evozi's cache.
+downloads given package directly from google play store or [Evozi's](https://apps.evozi.com/apk-downloader/) cache.
 
-based on: [APKDownloader](https://github.com/mohammadraquib/APKDownloader)
+based on [Evozi's](https://apps.evozi.com/apk-downloader/) API and his example [APKDownloader](https://github.com/mohammadraquib/APKDownloader)
 
 ## Usage
 

@@ -6,8 +6,11 @@ based on [Evozi's](https://apps.evozi.com/apk-downloader/) API and his example [
 
 ## Usage
 
-`php download.php <android-pkg-name>`
+`php download.php -p <android-pkg-name> [-b]`
+
+- required: `-p <android-pkg-name>` (e.g. open the play store and grab it from the URL)
+- optional: `-b` the "batch" mode will print (on success) only the local saved file name + DL url in the format: `<filename>;<dl-url>`
 
 e.g:
 
-`php download.php com.android.vending`
+`php download.php -p com.android.vending`
